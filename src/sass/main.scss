@@ -14,20 +14,15 @@ $mq-breakpoints: (
 // colours
 $c-background: #f8f1e7;
 $c-black: #121212;
-$c-blue: #0184c7;
-$c-dark-blue: #005689;
+$c-red: #e00714;
+$c-dark-red: #ac1917;
 $c-yellow: #fedf00;
-$c-header: #1e1d1f;
 
 // non-colours
 $c-white: #ffffff;
 $c-off-white: #f1f1f1;
 $c-grey: #dfdfdf;
 $c-dark-grey: #999;
-
-// social
-$c-twitter: #4bc6df;
-$c-facebook: #3067a3;
 
 // other
 $c-ad-grey: #f6f6f6;
@@ -37,3 +32,4 @@ $c-ad-grey: #f6f6f6;
 @import "partials/article";
 @import "partials/intro";
 @import "partials/share";
+@import "partials/photo";

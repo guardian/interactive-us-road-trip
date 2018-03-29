@@ -95,7 +95,7 @@
         }
 
         .element-image__credit {
-            color: $c-dark-blue;
+            color: $c-dark-red;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -148,7 +148,7 @@
         display: inline-block;
         text-transform: uppercase;
         float: left;
-        color: $c-dark-blue;
+        color: $c-dark-red;
         margin-right: 6px;
         height: 4.3em;
     }
@@ -163,16 +163,16 @@
     }
 
     p > a {
-        color: $c-dark-blue !important;
+        color: $c-dark-red !important;
         box-shadow: none !important;
         text-shadow: none !important;
-        border-bottom: 1px solid $c-blue !important;
+        border-bottom: 1px solid $c-red !important;
         background: none !important;
 
         &:hover {
             text-decoration: none !important;
             box-shadow: none !important;
-            color: $c-blue !important;
+            color: $c-red !important;
         }
     }
 
