@@ -1,6 +1,9 @@
 .road__photo {
+    position: relative;
+    z-index: 10000;
     max-width: 400px;
     margin: 40px 0;
+    transform: rotate(-2deg);
 }
 
 .road__photo-frame {
@@ -10,9 +13,43 @@
     padding-top: 120%;
 }
 
-.road__image {
+.road__image-wrapper {
     position: absolute;
     top: 20px;
     left: 20px;
     width: calc(100% - 40px);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    },
+    100% {
+        opacity: 0;
+    }
+}
+
+.road__image-filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #34322f;
+    animation: fade 4s ease-in forwards;
+
+    &--lighten {
+        background-color: #eacc9f;
+        mix-blend-mode: lighten;
+        animation-delay: 1s;
+        z-index: 2;
+    }
+}
+
+.road__image {
+    width: 100%;
+    height: 100%;
 }

@@ -4,4 +4,3 @@ var photos = require('./modules/photos.js');
 
 caps.init();
 share.init();
-photos.init();
