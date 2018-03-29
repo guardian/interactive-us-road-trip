@@ -1,0 +1,187 @@
+.content__main,
+.prose {
+    p, h1, h2, h3, .element-image {
+        max-width: 620px;
+
+        @include mq(leftCol) {
+            margin-left: 160px;
+        }
+
+        @include mq(wide) {
+            margin-left: 240px;
+        }
+    }
+
+    p:first-letter {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        font-size: inherit !important;
+        float: none !important;
+        margin: 0 !important;
+        line-height: inherit !important;
+        padding: 0 !important;
+    }
+
+    .element-rich-link {
+        display: none;
+    }
+
+    .element--supporting {
+        position: relative;
+        z-index: 20;
+        background-color: transparent !important;
+        margin-bottom: 12px !important;
+        margin-top: 0 !important;
+        margin-right: 10px !important;
+        max-width: 340px !important;
+
+        @include mq(mobileLandscape) {
+            margin-right: 20px !important;
+        }
+
+        @include mq(tablet) {
+            float: left !important;
+            width: 300px !important;
+        }
+
+        @include mq(leftCol) {
+            margin-left: 0px !important;
+        }
+
+        @include mq(wide) {
+            margin-left: 20px !important;
+        }
+    }
+
+    .element-image {
+        position: relative !important;
+        margin-bottom: 36px !important;
+
+        @include mq(leftCol) {
+            position: relative;
+            z-index: 25;
+            margin-left: 150px !important;
+            max-width: 630px;
+        }
+
+        @include mq(wide) {
+            margin-left: 230px !important;
+        }
+
+        figcaption {
+            position: absolute;
+            top: 7px;
+            bottom: -22px;
+            padding-top: 0;
+            padding-left: 10px !important;
+
+            @include mq(leftCol) {
+                padding-right: 120px !important;
+            }
+        }
+
+        .element-image__caption {
+            font-family: 'Guardian Egyptian Web', Georgia, serif;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 1.25;
+            color: #121212;
+            margin-top: 0px;
+            margin-bottom: 18px;
+            background: linear-gradient($c-yellow, $c-yellow) no-repeat;
+            box-shadow: 4px 0 0 $c-yellow, -4px 0 0 $c-yellow;
+            display: inline;
+        }
+
+        .element-image__credit {
+            color: $c-dark-blue;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            @include mq(leftCol) {
+                left: 10px;
+            }
+        }
+    }
+
+    .figure__caption__icon {
+        display: none !important;
+    }
+
+    .element-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        font-family: 'Guardian Sans Web';
+        font-size: 14px;
+        line-height: 1.2;
+        color: #676767;
+        padding-left: 0 !important;
+        padding-right:  0 !important;
+        border-bottom: none !important;
+    }
+
+    h2 {
+        font-family: 'Guardian Egyptian Web';
+        font-size: 24px;
+        color: $c-black !important;
+        font-weight: normal;
+        background-color: $c-white;
+        padding: 3px 4px;
+        display: inline-block;
+        padding: 0 8px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+
+        @include mq(tablet) {
+            font-size: 34px;
+        }
+    }
+
+    .road__drop-cap {
+        font-family: 'Guardian Egyptian Web';
+        font-weight: bold;
+        display: inline-block;
+        text-transform: uppercase;
+        float: left;
+        color: $c-dark-blue;
+        margin-right: 6px;
+        height: 4.3em;
+    }
+
+    .road__drop-inner {
+        font-size: 5.2em;
+        line-height: 0.79;
+    }
+
+    p {
+        margin-bottom: 18px;
+    }
+
+    p > a {
+        color: $c-dark-blue !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border-bottom: 1px solid $c-blue !important;
+        background: none !important;
+
+        &:hover {
+            text-decoration: none !important;
+            box-shadow: none !important;
+            color: $c-blue !important;
+        }
+    }
+
+    // app stuff
+        figure.element.element-image.figure-wide {
+            margin: 0;
+        }
+
+    figure.element.element-image.element--supporting.figure-wide {
+        margin-left: 0 !important;
+    }
+}
