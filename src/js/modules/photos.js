@@ -1,54 +1,68 @@
 var $ = require('../vendor/jquery.js');
 
-var canvas, W, H, ctx;
+var photos = [];
 
 module.exports =  {
     init: function() {
-        this.createCanvas();
-        this.bindings();
+        this.createCanvasses();
     },
 
-    bindings: function() {
-        
+    createCanvasses: function() {
+        canvasses = document.getElementsByClassName('road__image');
+
+        for (var i = 0; i < canvasses.length; i++) {
+            photos[i] = {};
+            photos[i].canvas = canvasses[i];
+            this.setupCanvas(i);
+            this.loadImage(i);
+        }
     },
 
-    createCanvas: function() {
-        canvas = document.getElementsByClassName('road__image')[0];
-        console.log(canvas);
-        this.setCanvasSize();
-        ctx = canvas.getContext('2d');
-
-        this.loadImage();
+    setupCanvas: function(i) {
+        size = photos[i].canvas.clientWidth;
+        photos[i].size = size;
+        photos[i].canvas.width = size;
+        photos[i].canvas.height = size;
+        photos[i].ctx = photos[i].canvas.getContext('2d');
     },
 
-    setCanvasSize: function() {
-        W = canvas.clientWidth;
-        H = canvas.clientWidth;
-        canvas.width = W;
-        canvas.height = H;
-    },
-
-    loadImage: function() {
+    loadImage: function(i) {
         var image = new Image();
         image.onload = function() {
-            this.draw(image);
+            photos[i].image = image;
+            this.generateImages(i);
         }.bind(this);
-        image.src = $('.road__image').data('image');
+        image.src = $(photos[i].canvas).data('image');
     },
 
-    draw: function(image) {
-        ctx.clearRect(0, 0, W, H);
-        ctx.drawImage(image, 0, 0, W, H);
-        var imgData = ctx.getImageData(0, 0, W, H);
-        var data = imgData.data;
+    generateImages: function(i) {
+        photos[i].ctx.clearRect(0, 0, photos[i].size, photos[i].size);
+        photos[i].ctx.drawImage(photos[i].image, 0, 0, photos[i].size, photos[i].size);
+        var imgData = photos[i].ctx.getImageData(0, 0, photos[i].size, photos[i].size);
 
-        for (var i = 0; i < data.length; i += 4) {
-            var grey = (0.2126 * data[i]) + (0.7152 * data[i + 1]) + (0.0722 * data[i + 2]);
-            data[i] = grey;
-            data[i + 1] = grey;
-            data[i + 2] = grey;
+        photos[i].originalImage = imgData;
+
+        var newImgData = photos[i].ctx.getImageData(0, 0, photos[i].size, photos[i].size);
+        var data = newImgData.data;
+
+        for (var d = 0; d < data.length; d += 4) {
+            var grey = (0.2126 * data[d]) + (0.7152 * data[d + 1]) + (0.0722 * data[d + 2]);
+            data[d] = grey;
+            data[d + 1] = grey;
+            data[d + 2] = grey;
         }
 
-        ctx.putImageData(imgData, 0, 0);
+        photos[i].treatedImage = newImgData;
+
+        this.animate(i);
     },
+
+    animate: function(i) {
+        this.draw(i);
+    },
+
+    draw: function(i) {
+        photos[i].ctx.clearRect(0, 0, photos[i].size, photos[i].size);
+        photos[i].ctx.putImageData(photos[i].treatedImage, 0, 0);
+    }
 };
