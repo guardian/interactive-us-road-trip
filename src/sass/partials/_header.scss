@@ -1,7 +1,12 @@
 .road__header {
     position: relative;
     overflow: hidden;
-    padding-top: 30%;
+    // Todo: different versions for different breakpoints
+    background-image: url('@@assetPath@@/assets/images/map.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1400px auto;
+    padding-top: 360px;
 
     &:after {
         content: '';
@@ -20,13 +25,15 @@
     }
 }
 
-.road__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1;
+.road__headline,
+.road__byline {
+    @include mq(leftCol) {
+        margin-left: 160px;
+    }
+
+    @include mq(wide) {
+        margin-left: 240px;
+    }
 }
 
 .road__headline {
@@ -57,7 +64,7 @@
     font-size: 18px;
     line-height: 1.2;
     padding: 6px 0;
-    margin: 0 !important;
+    margin-top: 0 !important;
 
     @include mq(desktop) {
         padding-top: 12px;
