@@ -8,16 +8,21 @@
 
 .road__photo-frame {
     position: relative;
-    background-color: $c-white;
+    background-image: url('@@assetPath@@/assets/images/frame.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
     height: 0;
     padding-top: 120%;
 }
 
 .road__image-wrapper {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: calc(100% - 40px);
+    top: 5%;
+    left: 6%;
+    width: 88%;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 @keyframes fade {

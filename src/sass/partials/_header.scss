@@ -1,0 +1,65 @@
+.road__header {
+    position: relative;
+    overflow: hidden;
+    padding-top: 30%;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        background: linear-gradient(transparent 60%, $c-background 80%);
+    }
+
+    .gs-container {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.road__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.road__headline {
+    color: $c-light-red;
+    font-family: 'Guardian Egyptian Web';
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0;
+
+    @include mq(desktop) {
+        font-size: 62px;
+        line-height: 1;
+    }
+
+    span {
+        color: $c-dark-red;
+        font-style: italic;
+        font-weight: 200;
+        display: block;
+    }
+}
+
+.road__byline {
+    color: $c-black;
+    font-family: 'Guardian Egyptian Web';
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 6px 0;
+    margin: 0 !important;
+
+    @include mq(desktop) {
+        padding-top: 12px;
+    }
+}

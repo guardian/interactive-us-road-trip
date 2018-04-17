@@ -15,6 +15,7 @@ $mq-breakpoints: (
 $c-background: #f8f1e7;
 $c-black: #121212;
 $c-red: #e00714;
+$c-light-red: #ea503d;
 $c-dark-red: #ac1917;
 $c-yellow: #fedf00;
 
@@ -33,3 +34,4 @@ $c-ad-grey: #f6f6f6;
 @import "partials/intro";
 @import "partials/share";
 @import "partials/photo";
+@import "partials/header";
