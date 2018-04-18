@@ -1,6 +1,5 @@
 .road__header {
     position: relative;
-    overflow: hidden;
 
     &:after {
         content: '';
@@ -26,6 +25,27 @@
             background: linear-gradient(transparent 60%, $c-grey 80%) !important;
         }
     }
+}
+
+.road__photo--header-1 {
+    position: absolute;
+    right: 10%;
+    z-index: 4;
+    top: 32%;
+    transform: rotate(-10deg);
+
+    @include mq(tablet) {
+        right: 10%;
+        top: 40%;
+    }
+}
+
+.road__photo--header-2 {
+    position: absolute;
+    left: -62px;
+    z-index: 4;
+    bottom: -170px;
+    transform: rotate(8deg);
 }
 
 @keyframes route {
@@ -56,6 +76,7 @@ $time: 8s;
     right: 0;
     bottom: 0;
     z-index: 1;
+    overflow: hidden;
 
     svg {
         width: 100%;
@@ -136,14 +157,14 @@ $time: 8s;
     opacity: 0;
 }
 
-@keyframes fade {
+@keyframes show {
     to {
         opacity: 1;
     }
 }
 
 .road-map__place {
-    animation: fade 0.4s linear forwards;
+    animation: show 0.4s linear forwards;
 }
 
 .road-map__place--1 {
