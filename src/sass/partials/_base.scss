@@ -70,7 +70,7 @@ figure.element-atom {
         height: 100%;
         width: 0.0625rem;
         background: $c-grey;
-        z-index: 20;
+        z-index: 1;
     }
 
     @include mq(wide) {

@@ -10,13 +10,21 @@
         right: 0;
         top: 0;
         z-index: 1;
-        background: linear-gradient(transparent 60%, $c-background 80%);
+        background: linear-gradient(transparent 50%, $c-background 70%);
+
+        @include mq(tablet) {
+            background: linear-gradient(transparent 60%, $c-background 80%);
+        }
     }
 
     .gs-container {
-        padding-top: 30%;
+        padding-top: 33%;
         position: relative;
         z-index: 2;
+
+        &:before {
+            background: linear-gradient(transparent 60%, $c-grey 80%) !important;
+        }
     }
 }
 
@@ -25,6 +33,21 @@
         stroke-dashoffset: 0;
     }
 }
+
+@keyframes pan {
+    0% {
+        transform: scale(1.5);
+        transform-origin: bottom left;
+    }
+
+    100% {
+        transform: scale(1);
+        transform-origin: center center;
+    }
+}
+
+$curve: cubic-bezier(0, 0, 0.3, 1);
+$time: 8s;
 
 .road__header-map {
     position: absolute;
@@ -36,6 +59,8 @@
 
     svg {
         width: 100%;
+        animation: pan $time $curve forwards;
+        will-change: transform;
     }
 
     #Land {
@@ -47,6 +72,7 @@
     }
 
     #parks path {
+        opacity: 1;
         fill: mix($c-black, $c-background, 5%);
     }
 
@@ -56,7 +82,7 @@
     }
 
     #road path {
-        stroke: mix($c-black, $c-background, 25%);
+        stroke: mix($c-black, $c-background, 10%);
     }
 
     #cities text {
@@ -64,20 +90,25 @@
         font-style: italic;
         font-size: 1.2em;
         fill: #676767;
+        display: none;
     }
 
-    #Visited text {
+    .road__map-label {
         font-family: 'Guardian Egyptian Web';
         font-weight: 900;
-        font-size: 1.4em;
+        font-size: 2.4em;
         fill: $c-black;
+
+        @include mq(tablet) {
+            font-size: 1.4em;
+        }
     }
 
     #route {
         stroke: #ac1917;
         stroke-dasharray: 2010;
         stroke-dashoffset: 2010;
-        animation: route 4s linear forwards;
+        animation: route $time $curve forwards;
     }
 
     .road__point {
