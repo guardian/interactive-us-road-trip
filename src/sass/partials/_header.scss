@@ -122,6 +122,14 @@ $time: 8s;
     .road__point--end {
         fill: $c-red;
     }
+
+    .road-map__state-label {
+        font-family: 'Guardian Egyptian Web';
+        font-style: italic;
+        font-size: 1em;
+        fill: $c-light-red;
+        opacity: .5
+    }
 }
 
 .road-map__place {
