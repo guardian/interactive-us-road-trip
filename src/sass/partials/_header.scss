@@ -1,12 +1,6 @@
 .road__header {
     position: relative;
     overflow: hidden;
-    // Todo: different versions for different breakpoints
-    background-image: url('@@assetPath@@/assets/images/map.jpg');
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 1400px auto;
-    padding-top: 360px;
 
     &:after {
         content: '';
@@ -20,8 +14,81 @@
     }
 
     .gs-container {
+        padding-top: 30%;
         position: relative;
         z-index: 2;
+    }
+}
+
+@keyframes route {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.road__header-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    svg {
+        width: 100%;
+    }
+
+    #Land {
+        fill: $c-background;
+    }
+
+    #Water path {
+        fill: darken($c-background, 3%);
+    }
+
+    #parks path {
+        fill: mix($c-black, $c-background, 5%);
+    }
+
+    #states path {
+        stroke: $c-light-red;
+        stroke-dasharray: 2;
+    }
+
+    #road path {
+        stroke: mix($c-black, $c-background, 25%);
+    }
+
+    #cities text {
+        font-family: 'Guardian Egyptian Web';
+        font-style: italic;
+        font-size: 1.2em;
+        fill: #676767;
+    }
+
+    #Visited text {
+        font-family: 'Guardian Egyptian Web';
+        font-weight: 900;
+        font-size: 1.4em;
+        fill: $c-black;
+    }
+
+    #route {
+        stroke: #ac1917;
+        stroke-dasharray: 2010;
+        stroke-dashoffset: 2010;
+        animation: route 4s linear forwards;
+    }
+
+    .road__point {
+        fill: $c-black;
+        stroke: $c-background;
+        stroke-width: 2;
+    }
+
+    .road__point--start,
+    .road__point--end {
+        fill: $c-red;
     }
 }
 
