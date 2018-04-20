@@ -1,4 +1,4 @@
-.content, .article__body, .tonal--tone-feature {
+.road {
     background-color: $c-background !important;
 }
 
@@ -16,47 +16,7 @@ figure.element-atom {
 figure.element-atom,
 figure.interactive-atom {
     margin: 0;
-//     overflow: hidden;
     height: 100%;
-}
-
-figure.element-atom {
-    margin-left: -10px;
-    margin-right: -10px;
-
-    @include mq(mobileLandscape) {
-        margin-left: -20px;
-        margin-right: -20px;
-    }
-
-    @include mq(phablet) {
-        margin-left: calc((100vw - 620px) / -2);
-        margin-right: calc((100vw - 620px) / -2);
-    }
-
-    @include mq(tablet) {
-        margin-left: calc((100vw - 700px) / -2);
-        margin-right: calc((100vw - 700px) / -2)
-    }
-
-    @include mq(desktop) {
-        margin-left: calc((100vw - 940px) / -2);
-        margin-right: calc((100vw - 940px) / -2)
-    }
-
-    @include mq(leftCol) {
-        margin-left: calc((100vw - 1100px) / -2);
-        margin-right: calc((100vw - 1100px) / -2)
-    }
-
-    @include mq(wide) {
-        margin-left: calc((100vw - 1260px) / -2);
-        margin-right: calc((100vw - 1260px) / -2)
-    }
-
-    .ios, .android {
-        margin: 0 !important;
-    }
 }
 
 // adds rule to page
