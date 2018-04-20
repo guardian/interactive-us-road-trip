@@ -20,7 +20,7 @@ figure.interactive-atom {
 }
 
 // adds rule to page
-.content .gs-container:before {
+.road .gs-container:before {
     @include mq(leftCol) {
         content: '';
         position: absolute;

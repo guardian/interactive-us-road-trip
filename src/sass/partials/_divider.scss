@@ -1,0 +1,70 @@
+.road__divider {
+    position: relative;
+    margin-top: 60px;
+
+    &:after {
+        content: '';
+        background: radial-gradient(circle at center, transparent 50%, $c-background 70%), url('@@assetPath@@/assets/images/map.svg');
+        background-size: auto, 600%;
+        width: 50%;
+        padding-top: 50%;
+        position: absolute;
+        left: -50%;
+        top: -70%;
+        z-index: 0;
+
+        @include mq(leftCol) {
+            left: -35%;
+            top: -120%;
+        }
+    }
+}
+
+.road__divider-day {
+    position: relative;
+    z-index: 2;
+    background-color: $c-black;
+    border-radius: 60px;
+    width: 102px;
+    height: 102px;
+
+    @include mq(leftCol) {
+        position: absolute;
+        left: -130px;
+        top: -8px;
+    }
+}
+
+.road__divider-number {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Guardian Figures';
+    font-size: 94px;
+    line-height: 1;
+    margin: auto;
+    color: $c-white;
+
+}
+
+.road__divider-header {
+    position: relative;
+    z-index: 2;
+    font-family: 'Guardian Egyptian Web';
+    font-size: 38px;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+.road__divider-title {
+    color: $c-light-red;
+    display: block;
+}
+
+.road__divider-location {
+    color: $c-black;
+}
