@@ -164,6 +164,8 @@ $time: 10s;
         stroke-dashoffset: 2010;
         animation: route $time $curve forwards;
         animation-delay: 1.5s;
+        will-change: stroke;
+        will-change: stroke-dashoffset;
     }
 
     .road__point {
@@ -213,31 +215,31 @@ $time: 10s;
 }
 
 .road-map__place--4 {
-    animation-delay: 3s;
+    animation-delay: 3.4s;
 }
 
 .road-map__place--5 {
-    animation-delay: 3.5s;
+    animation-delay: 3.9s;
 }
 
 .road-map__place--6 {
-    animation-delay: 4.5s;
+    animation-delay: 5.2s;
 }
 
 .road-map__place--7 {
-    animation-delay: 4.7s;
-}
-
-.road-map__place--8 {
     animation-delay: 5.5s;
 }
 
+.road-map__place--8 {
+    animation-delay: 6.4s;
+}
+
 .road-map__place--9 {
-    animation-delay: 6.9s;
+    animation-delay: 8s;
 }
 
 .road-map__place--10 {
-    animation-delay: 8.4s;
+    animation-delay: 10s;
 }
 
 .road-map__place--5,
