@@ -6,6 +6,12 @@
     min-width: 100px;
     margin: 40px 0;
     transform: rotate(-2deg);
+
+    &.is-developed {
+        .road__image-filter {
+            animation: fade 4s ease-in forwards;
+        }
+    }
 }
 
 .road__photo-frame {
@@ -46,7 +52,6 @@
     right: 0;
     bottom: 0;
     background-color: #34322f;
-    animation: fade 4s ease-in forwards;
 
     &--lighten {
         background-color: #eacc9f;
