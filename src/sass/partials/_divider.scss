@@ -4,7 +4,7 @@
 
     &:after {
         content: '';
-        background: radial-gradient(circle at center, transparent 50%, $c-background 70%), url('@@assetPath@@/assets/images/map.svg');
+        background: radial-gradient(circle at center, rgba(248,241,231, 0) 50%, $c-background 70%), url('@@assetPath@@/assets/images/map.svg');
         background-size: auto, 600%;
         width: 264px;
         height: 264px;
