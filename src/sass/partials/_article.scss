@@ -37,6 +37,19 @@
     line-height: 0.79;
 }
 
-.road__article .gs-container {
-    padding-top: 36px;
+.road__article {
+    .gs-container {
+        padding-top: 36px;
+    }
+
+    .road__photo {
+        margin-top: 0;
+        float: right;
+        margin-left: 20px;
+        margin-bottom: 20px;
+
+        @include mq(leftCol) {
+            margin-right: -120px;
+        }
+    }
 }
