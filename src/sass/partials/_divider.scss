@@ -1,21 +1,27 @@
 .road__divider {
     position: relative;
-    margin-top: 60px;
+    margin-top: 64px;
 
     &:after {
         content: '';
         background: radial-gradient(circle at center, transparent 50%, $c-background 70%), url('@@assetPath@@/assets/images/map.svg');
         background-size: auto, 600%;
-        width: 50%;
-        padding-top: 50%;
+        width: 264px;
+        height: 264px;
         position: absolute;
-        left: -50%;
-        top: -70%;
         z-index: 0;
+        top: 0;
+        left: 0;
+        transform: translate(-33%, -33%);
+
+        @include mq(tablet) {
+            width: 306px;
+            height: 306px;
+        }
 
         @include mq(leftCol) {
-            left: -35%;
-            top: -120%;
+            left: -130px;
+            top: -8px;
         }
     }
 }
@@ -25,8 +31,14 @@
     z-index: 2;
     background-color: $c-black;
     border-radius: 60px;
-    width: 102px;
-    height: 102px;
+    width: 88px;
+    height: 88px;
+    margin: 0;
+
+    @include mq(tablet) {
+        width: 102px;
+        height: 102px;
+    }
 
     @include mq(leftCol) {
         position: absolute;
@@ -35,29 +47,57 @@
     }
 }
 
+.road__divider-label {
+    position: absolute;
+    left: 8px;
+    top: 30px;
+    font-family: 'Guardian Egyptian Web';
+    font-weight: normal;
+    font-style: italic;
+    color: $c-light-red;
+    font-size: 18px;
+
+    @include mq(tablet) {
+        font-size: 22px;
+        top: 35px;
+    }
+}
+
 .road__divider-number {
     position: absolute;
-    top: 8px;
-    left: 0;
+    top: 10px;
+    left: 18px;
     right: 0;
     bottom: 0;
     text-align: center;
     display: inline-block;
     font-family: 'Guardian Figures';
-    font-size: 94px;
+    font-size: 74px;
     line-height: 1;
     margin: auto;
     color: $c-white;
 
+    @include mq(tablet) {
+        font-size: 84px;
+        top: 12px;
+        left: 24px;
+    }
 }
 
 .road__divider-header {
     position: relative;
     z-index: 2;
     font-family: 'Guardian Egyptian Web';
-    font-size: 38px;
-    line-height: 1.1;
+    font-size: 24px;
+    line-height: 1.2;
     font-weight: bold;
+    margin: 0;
+
+    @include mq(tablet) {
+        font-size: 38px;
+        line-height: 1.1;
+        margin-bottom: 8px;
+    }
 }
 
 .road__divider-title {
