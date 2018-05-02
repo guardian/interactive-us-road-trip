@@ -89,6 +89,7 @@
     }
 
     100% {
+        opacity: 1;
         transform: scale(1);
         transform-origin: center center;
     }
@@ -111,10 +112,60 @@ $time: 10s;
         right: 0;
     }
 
+    &.is-animating {
+        svg {
+            animation: pan $time $curve forwards;
+        }
+
+        .road-map__place {
+            animation: show 0.4s linear forwards;
+        }
+
+        .road-map__place--1 {
+            animation-delay: 1.5s;
+        }
+
+        .road-map__place--2 {
+            animation-delay: 1.8s;
+        }
+
+        .road-map__place--3 {
+            animation-delay: 2.1s;
+        }
+
+        .road-map__place--4 {
+            animation-delay: 3.4s;
+        }
+
+        .road-map__place--5 {
+            animation-delay: 3.9s;
+        }
+
+        .road-map__place--6 {
+            animation-delay: 5.2s;
+        }
+
+        .road-map__place--7 {
+            animation-delay: 5.5s;
+        }
+
+        .road-map__place--8 {
+            animation-delay: 6.4s;
+        }
+
+        .road-map__place--9 {
+            animation-delay: 8s;
+        }
+
+        .road-map__place--10 {
+            animation-delay: 10s;
+        }
+    }
+
     svg {
         width: 100%;
-        animation: pan $time $curve forwards;
         will-change: transform;
+        opacity: 0;
     }
 
     #Land {
@@ -162,10 +213,6 @@ $time: 10s;
         stroke: #ac1917;
         stroke-dasharray: 2010;
         stroke-dashoffset: 2010;
-        animation: route $time $curve forwards;
-        animation-delay: 1.5s;
-        will-change: stroke;
-        will-change: stroke-dashoffset;
     }
 
     .road__point {
@@ -196,50 +243,6 @@ $time: 10s;
     to {
         opacity: 1;
     }
-}
-
-.road-map__place {
-    animation: show 0.4s linear forwards;
-}
-
-.road-map__place--1 {
-    animation-delay: 1.5s;
-}
-
-.road-map__place--2 {
-    animation-delay: 1.8s;
-}
-
-.road-map__place--3 {
-    animation-delay: 2.1s;
-}
-
-.road-map__place--4 {
-    animation-delay: 3.4s;
-}
-
-.road-map__place--5 {
-    animation-delay: 3.9s;
-}
-
-.road-map__place--6 {
-    animation-delay: 5.2s;
-}
-
-.road-map__place--7 {
-    animation-delay: 5.5s;
-}
-
-.road-map__place--8 {
-    animation-delay: 6.4s;
-}
-
-.road-map__place--9 {
-    animation-delay: 8s;
-}
-
-.road-map__place--10 {
-    animation-delay: 10s;
 }
 
 .road-map__place--5,
