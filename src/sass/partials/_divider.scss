@@ -49,38 +49,39 @@
 
 .road__divider-label {
     position: absolute;
-    left: 8px;
-    top: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 12px;
     font-family: 'Guardian Egyptian Web';
     font-weight: normal;
     font-style: italic;
     color: $c-light-red;
-    font-size: 18px;
+    font-size: 16px;
 
     @include mq(tablet) {
-        font-size: 22px;
-        top: 35px;
+        font-size: 18px;
+        bottom: 14px;
     }
 }
 
 .road__divider-number {
     position: absolute;
-    top: 10px;
-    left: 18px;
+    top: 14px;
+    left: 0;
     right: 0;
     bottom: 0;
     text-align: center;
     display: inline-block;
     font-family: 'Guardian Figures';
-    font-size: 74px;
+    font-size: 48px;
     line-height: 1;
     margin: auto;
     color: $c-white;
 
     @include mq(tablet) {
-        font-size: 84px;
-        top: 12px;
-        left: 24px;
+        font-size: 54px;
+        top: 16px;
     }
 }
 
