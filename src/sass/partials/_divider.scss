@@ -6,6 +6,7 @@
         content: '';
         background: radial-gradient(circle at center, rgba(248,241,231, 0) 50%, $c-background 70%), url('@@assetPath@@/assets/images/map.svg');
         background-size: auto, 600%;
+        background-position: 0 0, 50% 50%;
         width: 264px;
         height: 264px;
         position: absolute;
@@ -23,6 +24,35 @@
             left: -130px;
             top: -8px;
         }
+    }
+
+    &--moore:after {
+        background-position: 0 0, 18.5% 34%;
+    }
+
+    &--ferguson:after,
+    &--alton:after {
+        background-position: 0 0, 42.1% 0%;
+    }
+
+    &--indiana:after {
+        background-position: 0 0, 53.1% -1%;
+    }
+
+    &--dublin:after {
+        background-position: 0 0, 64.1% -9%;
+    }
+
+    &--wilmington:after {
+        background-position: 0 0, 63.2% -4%;
+    }
+
+    &--charleston:after {
+        background-position: 0 0, 69% 1.7%;
+    }
+
+    &--washington-dc:after {
+        background-position: 0px 0, 87% 0%;
     }
 }
 

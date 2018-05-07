@@ -91,6 +91,10 @@ module.exports = {
             return (index + 2) / 2;
         });
 
+        handlebars.registerHelper('locationise', function(string) {
+            return string.replace(' ', '-').toLowerCase().split(',')[0];
+        });
+
         var html = fs.readFileSync('src/templates/main.html', 'utf8');
         var template = handlebars.compile(html);
 
