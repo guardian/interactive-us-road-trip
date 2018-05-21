@@ -76,6 +76,39 @@
 
     &--echo {
         transform: rotate(4deg);
+        float: right;
+        margin-left: 20px;
+
+        @include mq(leftCol) {
+            margin-right: -160px;
+        }
+    }
+
+    &--coffee {
+        float: right;
+        margin-left: 20px;
+        margin-bottom: 12px;
+
+        @include mq(tablet) {
+            width: 360px;
+        }
+
+        @include mq(leftCol) {
+            margin-right: -160px;
+        }
+    }
+
+    &--hannity {
+        margin-top: 18px;
+        transform: rotate(-6deg);
+
+        @include mq(tablet) {
+            width: 300px;
+        }
+
+        @include mq(leftCol) {
+            margin-left: -160px;
+        }
     }
 }
 
@@ -92,6 +125,30 @@
 
         @include mq(leftCol) {
             margin-right: -120px;
+        }
+
+        &--article-2 {
+            transform: rotate(3deg);
+        }
+
+        &--article-5,
+        &--article-3 {
+            float: left;
+            margin-top: 6px;
+            transform: rotate(-5deg);
+            margin-right: 20px;
+
+            @include mq(leftCol) {
+                margin-left: -160px;
+            }
+        }
+
+        &--article-4 {
+            transform: rotate(5deg);
+        }
+
+        &--article-5 {
+            transform: rotate(3deg);
         }
     }
 }
