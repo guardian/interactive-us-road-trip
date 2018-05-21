@@ -67,11 +67,11 @@
     }
 
     @include mq(leftCol) {
-        left: -104px;
+        left: -110px;
     }
 
     @include mq(wide) {
-        left: -62px;
+        left: -70px;
     }
 }
 
