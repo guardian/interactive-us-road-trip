@@ -64,6 +64,7 @@
     width: 88px;
     height: 88px;
     margin: 0;
+    margin-bottom: 8px;
 
     @include mq(tablet) {
         width: 102px;
@@ -124,10 +125,10 @@
     line-height: 1.35;
     font-weight: bold;
     margin: 0;
+    margin-bottom: 8px;
 
     @include mq(tablet) {
         font-size: 38px;
-        margin-bottom: 8px;
     }
 }
 
