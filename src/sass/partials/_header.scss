@@ -285,7 +285,8 @@ $time: 10s;
 .road__byline {
     color: $c-black;
     font-family: 'Guardian Egyptian Web';
-    font-weight: bold;
+    font-weight: normal;
+    font-style: italic;
     font-size: 20px;
     line-height: 1.2;
     padding: 6px 0;
@@ -294,5 +295,17 @@ $time: 10s;
 
     @include mq(desktop) {
         padding-top: 12px;
+    }
+
+    a {
+        font-weight: bold;
+        font-style: normal;
+        color: $c-black;
+        border-bottom: 1px solid $c-dark-red;
+
+        &:hover {
+            color: $c-dark-red;
+            border-bottom-color: $c-dark-red;
+        }
     }
 }

@@ -5,7 +5,7 @@
     &:after {
         content: '';
         background: radial-gradient(circle at center, rgba(248,241,231, 0) 50%, $c-background 70%), url('@@assetPath@@/assets/images/map.svg');
-        background-size: auto, 600%;
+        background-size: auto, 1000%;
         background-position: 0 0, 50% 50%;
         width: 264px;
         height: 264px;
@@ -22,17 +22,17 @@
 
         @include mq(leftCol) {
             left: -130px;
-            top: -8px;
+            top: 0px;
         }
     }
 
     &--moore:after {
-        background-position: 0 0, 18.5% 34%;
+        background-position: 0 0, 20.5% 36%;
     }
 
     &--ferguson:after,
     &--alton:after {
-        background-position: 0 0, 42.1% 0%;
+        background-position: 0 0, 42.1% 8%;
     }
 
     &--indiana:after {
@@ -40,19 +40,19 @@
     }
 
     &--dublin:after {
-        background-position: 0 0, 64.1% -9%;
+        background-position: 0 0, 65.1% -2%;
     }
 
     &--wilmington:after {
-        background-position: 0 0, 63.2% -4%;
+        background-position: 0 0, 61.2% 2%;
     }
 
     &--charleston:after {
-        background-position: 0 0, 69% 1.7%;
+        background-position: 0 0, 69% 9.7%;
     }
 
     &--washington-dc:after {
-        background-position: 0px 0, 87% 0%;
+        background-position: 0 0, 83% 5%;
     }
 }
 
@@ -73,7 +73,7 @@
     @include mq(leftCol) {
         position: absolute;
         left: -130px;
-        top: -8px;
+        top: 0;
     }
 }
 
@@ -115,27 +115,36 @@
     }
 }
 
+
 .road__divider-header {
     position: relative;
     z-index: 2;
     font-family: 'Guardian Egyptian Web';
     font-size: 24px;
-    line-height: 1.2;
+    line-height: 1.35;
     font-weight: bold;
     margin: 0;
 
     @include mq(tablet) {
         font-size: 38px;
-        line-height: 1.1;
         margin-bottom: 8px;
     }
 }
 
+.road__divider-title,
+.road__divider-location {
+    display: inline;
+    padding-bottom: .1em;
+    background: linear-gradient($c-light-red, $c-light-red) no-repeat;
+    box-shadow: 4px 0 0 $c-light-red, -4px 0 0 $c-light-red;
+}
+
 .road__divider-title {
-    color: $c-light-red;
-    display: block;
+    color: $c-white;
 }
 
 .road__divider-location {
     color: $c-black;
+    font-weight: 200;
+    font-style: italic;
 }
