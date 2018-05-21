@@ -17,6 +17,31 @@
         line-height: 24px;
         color: $c-black;
         margin-bottom: 18px;
+
+        &.credits {
+            font-family: 'Guardian Sans Web';
+            color: $c-light-red;
+        }
+    }
+
+    a {
+        color: $c-light-red;
+        border-bottom: 1px solid mix($c-dark-red, $c-background, 30%);
+        transition: color 0.3s linear, border 0.3s linear;
+
+        &:hover {
+            color: $c-dark-red;
+            border-bottom-color: $c-dark-red;
+            text-decoration: none;
+        }
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        width: 50%;
+        background-color: $c-grey;
+        margin-left: 0;
     }
 }
 
@@ -47,6 +72,10 @@
 
     @include mq(leftCol) {
         margin-left: -120px;
+    }
+
+    &--echo {
+        transform: rotate(4deg);
     }
 }
 
