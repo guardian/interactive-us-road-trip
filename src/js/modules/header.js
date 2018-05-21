@@ -1,17 +1,27 @@
-var $ = require('../vendor/jquery.js');
-var snap = require('snapsvg');
+var snap = require('../vendor/snap.js');
 var BezierEasing = require('bezier-easing');
 
 var duration = 10000;
 
 module.exports =  {
     init: function() {
-        $(document).ready(function() {
-            this.animate();
-        }.bind(this))
+        this.loadImage();
+    },
+
+    loadImage: function() {
+        $.ajax({
+            url: '@@assetPath@@/assets/images/map.svg',
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                $('.road__header-map').append(data);
+                this.animate();
+            }.bind(this)
+        });
     },
 
     animate: function() {
+        console.log('animating');
         var s = snap('#svg');
 
         $('.road__header-map').addClass('is-animating');

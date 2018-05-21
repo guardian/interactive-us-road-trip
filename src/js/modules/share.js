@@ -1,5 +1,3 @@
-var $ = require('../vendor/jquery.js');
-
 var pageUrl = window.location.href.split('#')[0],
     title = '‘I don\'t have to peak to win’: The unstoppable Mikaela Shiffrin wants it all';
 

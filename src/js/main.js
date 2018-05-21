@@ -1,3 +1,5 @@
+window.$ = require('./vendor/jquery.js');
+
 var share = require('./modules/share.js');
 var photos = require('./modules/photos.js');
 var header = require('./modules/header.js');

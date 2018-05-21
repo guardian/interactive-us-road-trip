@@ -1,5 +1,3 @@
-var $ = require('../vendor/jquery.js');
-
 var windowTop,
     windowHeight;
 

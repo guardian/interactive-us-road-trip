@@ -203,6 +203,7 @@ $time: 10s;
         font-weight: 900;
         font-size: 2.8em;
         fill: $c-black;
+        display: block;
 
         @include mq(tablet) {
             font-size: 1.4em;
