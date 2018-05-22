@@ -21,29 +21,41 @@
     }
 
     .gs-container {
-        padding-top: 40%;
+        padding-top: 6px;
+        padding-bottom: 70%;
         position: relative;
         z-index: 2;
 
         @include mq(tablet) {
             padding-top: 33%;
+            padding-bottom: 0;
         }
 
         &:before {
             background: linear-gradient(transparent 60%, $c-grey 80%) !important;
         }
     }
+
+    .road__photo {
+        @include mq($until: tablet) {
+            width: 56vw;
+            max-width: none;
+        }
+    }
 }
 
 .road__photo--header-1 {
     position: absolute;
-    right: -2%;
-    z-index: 4;
-    top: 22%;
-    transform: rotate(-10deg);
+    left: -4%;
+    z-index: 5;
+    bottom: -13%;
+    transform: rotate(-6deg);
 
     @include mq(tablet) {
+        transform: rotate(-10deg);
+        z-index: 4;
         right: 10%;
+        left: auto;
         top: 40%;
     }
 }
@@ -52,12 +64,11 @@
     position: absolute;
     z-index: 4;
     transform: rotate(8deg);
-    top: 51%;
-    right: 4%;
+    right: -5%;
+    bottom: -1%;
 
     @include mq(tablet) {
         right: -8%;
-        top: auto;
         bottom: -80px;
     }
 
@@ -110,10 +121,12 @@ $time: 10s;
     bottom: 0;
     z-index: 1;
     overflow: hidden;
+    display: none;
 
     @include mq(tablet) {
         left: 0;
         right: 0;
+        display: block;
     }
 
     &.is-animating {
@@ -262,10 +275,14 @@ $time: 10s;
     color: $c-light-red;
     font-family: 'Guardian Egyptian Web';
     font-weight: bold;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 1.2;
     margin: 0;
-    padding-right: 110px;
+
+    @include mq(mobileLandscape) {
+        font-size: 36px;
+        line-height: 1.1;
+    }
 
     @include mq(tablet) {
         font-size: 36px;
