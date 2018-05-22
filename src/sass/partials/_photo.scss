@@ -9,7 +9,7 @@
 
     &.is-developed {
         .road__image-filter {
-            animation: fade 4s ease-in forwards;
+            animation: fade 2s ease-in forwards;
         }
     }
 }
@@ -56,7 +56,7 @@
     &--lighten {
         background-color: #eacc9f;
         mix-blend-mode: lighten;
-        animation-delay: 1.5s;
+        animation-delay: .75s;
         z-index: 2;
     }
 }

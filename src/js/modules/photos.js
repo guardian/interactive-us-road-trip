@@ -22,7 +22,7 @@ module.exports =  {
         windowHeight = $(window).height();
 
         $('.road__photo.is-undeveloped').each(function() {
-            if (windowTop > $(this).offset().top - (windowHeight / 2)) {
+            if (windowTop > $(this).offset().top - (windowHeight / 1.2)) {
                 $(this).removeClass('is-undeveloped').addClass('is-developed');
             }
         })
