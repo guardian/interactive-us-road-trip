@@ -166,6 +166,17 @@
             }
         }
 
+        &--article-2,
+        &--article-4,
+        &--article-6 {
+            @include mq($until: tablet) {
+                float: none;
+                width: 90vw;
+                margin: 12px auto;
+                max-width: 380px;
+            }
+        }
+
         &--article-4 {
             transform: rotate(5deg);
         }
