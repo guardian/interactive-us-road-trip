@@ -99,6 +99,17 @@
         }
     }
 
+    &--map {
+        width: 100%;
+        float: none;
+        transform: rotate(4deg);
+        margin: 24px 0;
+
+        @include mq(tablet) {
+            display: none;
+        }
+    }
+
     &--coffee {
         float: right;
         margin-left: 20px;
